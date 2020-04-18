@@ -7,9 +7,116 @@
     </head>
     <body>
         <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-    
-        <main>
 
-        </main>
+    <!-- Table of contents
+
+    - Introductions
+
+    - Section A: Name   (text field)
+
+    - Section B: Email  (email field)
+
+    - Section C: Age    (number field)
+
+    - Section D: Gender (dropdown box)
+
+    - Section E: Other resource question  (radio buttons)
+
+    - Section F: Languages    (checkbox)
+
+    - Section G: Comments     (text area)
+
+    - Section H: End of form  (submit button)
+
+    -->
+
+
+    <main id="main">
+    
+    <div class="bg-image"></div>
+    
+    <!-- Introduction -->
+    <header id="intro">
+        <h1 id="title">Short Front End Survey</h1>
+        <p id="description">A short survey for freecodecamp users. Thank you for taking this survey!</p>
+    </header>
+    
+    <!-- Survey starts here -->
+    <form id="survey-form" class="flex card">
+    
+        <!-- Section A: Name -->
+        <!-- First name -->
+        <div id="section-a" class="form__group">
+        <label for="name" id="name-label">First Name</label>
+        <input id="name" name="name" type="text" placeholder="John Smith" maxlength="40" required>
+        </div>
+        
+        <!-- Section B: Email -->
+        <div id="section-b" class="form__group">
+        <label for="email" id="email-label">Email</label>
+        <input type="email" name="email" id="email" placeholder="example@example.com" required>
+        </div>
+        
+        <!-- Section C: Age -->
+        <div id="section-c" class="form__group">
+        <label for="number">Age</label>
+        <input type="number" name="age" id="number" min="0" max="150" placeholder="18" required>
+        </div>
+        
+        <!-- Sectoin D: Gender -->
+        <div id="section-d" class="form__group">
+        <label for="dropdown" id="gender-label">Gender</label>
+        <select name="gender" id="dropdown" class="form__dropdown" required>
+            <option disabled selected value>Select a gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>   
+        </div>
+        
+        <!-- Section E: Other resource question -->
+        <div id="section-e" class="form__group">
+        <fieldset id="resource-label">
+            <legend>Are you learning from any resources other than FreeCodeCamp.org?</legend>
+            <label for="yes">
+            <input type="radio" name="yes-no" id="yes" value="yes" checked> Yes </label>
+            
+            <label for="no">
+            <input type="radio" name="yes-no" id="no" value="no"> No </label>
+        </fieldset>
+        </div>
+        
+        <!-- Section F: Languages -->
+        <div id="section-f" class="form__group">
+        <fieldset id="language-label">
+            <legend>Select all languages you may know:</legend>
+            <label for="html">
+            <input type="checkbox" value="html" id="html" name="languages"> HTML
+            </label>
+            <label for="css">
+            <input type="checkbox" value="css" id="css" name="languages"> CSS
+            </label>
+            <label for="javascript">
+            <input type="checkbox" value="javascript" id="javascript" name="languages"> Javascript
+            </label>
+            <label for="others">
+            <input type="checkbox" value="others" id="others" name="languages"> Others
+            </label>        
+        </fieldset> 
+        </div>
+        
+        <!-- Section G: Comments -->
+        <div id="section-g" class="form__group">  
+        <label for="comments" id="comments-label">Do you have any additional comments?</label>
+        <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+        </div>
+        
+        
+        <!-- Section H: End of Form -->
+        <div class="form__group">
+        <button id="submit" type="submit" value="Submit" class="button"> Submit </button>
+        </div>
+    </form>  
+    </main>
     </body>
 </html>
